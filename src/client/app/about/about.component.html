@@ -1,0 +1,66 @@
+<p>
+  Angular 2 Seed is a starter project that implements best practices in
+  coding, building and testing Angular 2 apps.
+</p>
+
+<h2>Features</h2>
+<ul>
+  <li>Ready to go, statically typed build system using Gulp for working with TypeScript.</li>
+  <li>Production and development builds.</li>
+  <li>Sample unit tests with Jasmine and Karma including code coverage via Istanbul.</li>
+  <li>End-to-end tests with Protractor.</li>
+  <li>Development server with live reload.</li>
+  <li>TypeScript definition management using Typings.</li>
+  <li>Basic Service Worker, which implements "Cache then network strategy".</li>
+</ul>
+
+<alert type="success">ng2-bootstrap hello world!</alert>
+<div class="alert alert-success">
+  <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+
+<div class="alert alert-info">
+  <strong>Info!</strong> Indicates a neutral informative change or action.
+</div>
+
+<div class="alert alert-warning">
+  <strong>Warning!</strong> Indicates a warning that might need attention.
+</div>
+
+<div class="alert alert-danger">
+  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+</div>
+
+<div class="alert alert-success">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Panel Heading</div>
+  <div class="panel-body">Panel Content</div>
+</div>
+
+  <hr />
+  <tabset>
+    <tab heading="Static title">Static content</tab>
+    <tab *ngFor="let tabz of tabs"
+         [heading]="tabz.title"
+         [active]="tabz.active"
+         (select)="tabz.active = true"
+         (deselect)="tabz.active = false"
+         [disabled]="tabz.disabled"
+         [removable]="tabz.removable"
+         (removed)="removeTabHandler(tabz)">
+      {{tabz?.content}}
+    </tab>
+    <tab (select)="alertMe()">
+      <template tabHeading>
+        <i class="glyphicon glyphicon-bell"></i> Alert!
+      </template>
+      I've got an HTML heading, and a select callback. Pretty cool!
+    </tab>
+  </tabset>
+ 
+  <hr />
+
